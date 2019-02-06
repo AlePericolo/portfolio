@@ -61,11 +61,12 @@ html, body{
     padding: 0.3rem;
     background-color: #212529
 }
-
+/*
 .lightContainer {
     background-color: #f0f8ff1c;
     padding: 10px;
 }
+*/
 
 .fakeimg {
     height: 200px;
@@ -75,14 +76,15 @@ html, body{
 /*---------------------------------------------------- CONTAINER -----------------------------------------------------*/
 .dataBodyContainer {
 
-    height: 80vh;
+    height: 77vh;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #518492;
-    background-repeat: repeat;
+    /*background-color: #518492;
+    background-repeat: repeat;*/
     /*background-image: url('../img/texture/skulls.png');*/
-    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    /*background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");*/
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.4), rgba(171, 219, 247, 0.56)); /* Standard syntax (must be last) */
 }
 
 .dataBodyView {
@@ -140,6 +142,7 @@ html, body{
     position: relative;
     height: 100px;
     width: 100px;
+    cursor: default !important;
 }
 
 .imageCode {
@@ -151,12 +154,10 @@ html, body{
 .textCode {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 49, 120, 0.97);
-    background: rgba(152, 167, 191, 0.5); /* Black see-through */
     color: #212529;
     width: 100%;
     height: 100%;
-    transition: .5s ease;
+    transition: 0.7s ease;
     opacity:0;
     font-size: 1.3em;
     font-weight: bold;
@@ -164,12 +165,22 @@ html, body{
     text-align: center;
 }
 
+.php{background-image: radial-gradient(#ffffff, rgba(156, 174, 255, 0.56), rgba(80, 80, 80, 0.67));}
+.python{background-image: radial-gradient(#ffffff, rgba(73, 67, 224, 0.37), rgba(234, 194, 50, 0.34));}
+.html{background-image: radial-gradient(#ffffff, rgba(224, 82, 42, 0.33), rgba(255, 110, 31, 0.33));}
+.bootstrap{background-image: radial-gradient(#ffffff, rgba(125, 95, 224, 0.51), rgba(101, 25, 190, 0.51));}
+.angularjs{background-image: radial-gradient(#ffffff, rgba(215, 62, 62, 0.37), rgba(255, 35, 33, 0.35));}
+.javascript{background-image: radial-gradient(#ffffff, rgba(255, 213, 52, 0.48), rgba(255, 191, 81, 0.53));}
+.mongodb{background-image: radial-gradient(#ffffff, rgba(88, 88, 88, 0.55), rgba(123, 214, 103, 0.56));}
+.mysql{background-image: radial-gradient(#ffffff, rgba(63, 142, 214, 0.47), rgba(255, 110, 31, 0.61));}
+.postgre{background-image: radial-gradient(#dee3e5, #a9c5d6, #e7f9ff);font-size: 1.1em;}
+
 .containerCodeImage:hover{
     box-shadow:-1px 1px 3px 1px #212529;
 }
 
 .containerCodeImage:hover .imageCode {
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .containerCodeImage:hover .textCode {
