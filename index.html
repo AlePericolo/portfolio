@@ -42,23 +42,23 @@
         <div class="dataBodyView" ng-view></div>
     </div>
 
-    <div class="foot">
+    <div class="foot" ng-controller="footerController">
         <div class="col-md-8 offset-md-2 col-sm-12">
             <div class="row">
                 <div class="col-3 px-0">
-                    <img src="img/footer/eat.png" alt="eat" class="imageFoot" onclick="PlaySound('eat')">
+                    <img src="img/footer/eat.png" alt="eat" class="imageFoot" ng-click="playSound('eat')">
                     <div class="fontFoot">eat <b class="yellow">( )</b>;</div>
                 </div>
                 <div class="col-3 px-0">
-                    <img src="img/footer/sleep.png" alt="sleep" class="imageFoot" onclick="PlaySound('sleep')">
+                    <img src="img/footer/sleep.png" alt="sleep" class="imageFoot" ng-click="playSound('sleep')">
                     <div class="fontFoot">sleep <b class="green">( )</b>;</div>
                 </div>
                 <div class="col-3 px-0">
-                    <img src="img/footer/code.png" alt="code" class="imageFoot" onclick="PlaySound('code')">
+                    <img src="img/footer/code.png" alt="code" class="imageFoot" ng-click="playSound('code')">
                     <div class="fontFoot">code <b class="blue">( )</b>;</div>
                 </div>
                 <div class="col-3 px-0">
-                    <img src="img/footer/repeat.png" alt="repeat" class="imageFoot" style="margin-left: 0.8rem;" onclick="PlaySound('repeat')">
+                    <img src="img/footer/repeat.png" alt="repeat" class="imageFoot" style="margin-left: 0.8rem;" ng-click="playSound('repeat')">
                     <div class="fontFoot">repeat <b class="red">( )</b>;</div>
                 </div>
             </div>

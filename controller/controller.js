@@ -18,10 +18,14 @@ app.config(function($routeProvider) {
         });
 });
 
-function PlaySound(s) {
-    var snd = new Audio('sound/' + s + ".mp3");
-    snd.play();
-}
+app.controller("footerController", function ($scope) {
+
+    $scope.playSound = function (s) {
+        var snd = new Audio('sound/' + s + ".wav");
+        snd.play();
+    }
+});
+
 
 app.controller("projectsController", function ($scope) {
 
