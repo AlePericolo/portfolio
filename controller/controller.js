@@ -26,7 +26,6 @@ app.controller("footerController", function ($scope) {
     }
 });
 
-
 app.controller("projectsController", function ($scope) {
 
     $scope.projects = [
@@ -40,25 +39,55 @@ app.controller("projectsController", function ($scope) {
                       ];
 });
 
-
-
 app.controller("contactController",  ['$scope', '$http', function ($scope, $http) {
-    $scope.email = {
-        email: '',
-        subject: '',
-        message: ''
+
+    $scope.test = function () {
+        Swal.fire({
+            title: 'Your email was sent successfully!',
+            text: "La sua email è stata inviata correttamente.",
+            type: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+        }).then(function(result){
+            if (result.value) {
+                window.location.reload();
+            }
+        })
     };
+
+    $scope.email = {email: '', subject: '', message: ''};
+
     $scope.sendEmail = function () {
         $http({
             method: 'POST',
             url: 'http://alessandropericolo14.altervista.org/page/contact.php',
             data: $scope.email,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function(data){
             if(data.statusText === "OK"){
-                Swal.fire('Your email was sent successfully!', 'La sua email è stata inviata correttamente.', 'success')
+                Swal.fire({
+                    title: 'Your email was sent successfully!',
+                    text: 'La sua email è stata inviata correttamente.',
+                    type: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }).then(function(result){
+                    if (result.value) {
+                        window.location.reload();
+                    }
+                })
             }else{
-                Swal.fire('Error, email not sent!', 'Errore, la sua email non è stata inviata.', 'error')
+                Swal.fire({
+                    title: 'Error, email not sent!',
+                    text: 'Errore, la sua email non è stata inviata.',
+                    type: 'error',
+                    confirmButtonColor: '#d62037',
+                    confirmButtonText: 'OK'
+                }).then(function(result){
+                    if (result.value) {
+                        window.location.reload();
+                    }
+                })
             }
         });
     };

@@ -167,7 +167,7 @@ html, body{
 }
 
 .php{background-image: radial-gradient(#ffffff, rgba(156, 174, 255, 0.56), rgba(80, 80, 80, 0.67));}
-.python{background-image: radial-gradient(#ffffff, rgba(73, 67, 224, 0.37), rgba(234, 194, 50, 0.34));}
+.python{background-image: radial-gradient(#ffffff, rgba(234, 194, 50, 0.34), rgba(73, 67, 224, 0.37));}
 .html{background-image: radial-gradient(#ffffff, rgba(224, 82, 42, 0.33), rgba(255, 110, 31, 0.33));}
 .bootstrap{background-image: radial-gradient(#ffffff, rgba(125, 95, 224, 0.51), rgba(101, 25, 190, 0.51));}
 .angularjs{background-image: radial-gradient(#ffffff, rgba(215, 62, 62, 0.37), rgba(255, 35, 33, 0.35));}
