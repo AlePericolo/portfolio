@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
         });
 });
 
+function PlaySound(s) {
+    var snd = new Audio('sound/' + s + ".mp3");
+    snd.play();
+}
 
 app.controller("projectsController", function ($scope) {
 
