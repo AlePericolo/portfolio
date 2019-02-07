@@ -11,6 +11,8 @@ body {
   }
 }
 
+.bg-primary {background-color: #2b4850 !important;}
+
 /*-------------------------------------------------- TYPOGRAPHY ------------------------------------------------------*/
 
 
@@ -22,8 +24,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size: 6rem;}
+@media (max-width: 992px) {
+  h1 {font-size: 4.5rem;}
+}
 
-h2 {font-size: 3.5rem;}
+h2 {font-size: 3.5rem}
 
 h3 {font-size: 2rem;}
 
@@ -114,7 +119,8 @@ p.lead {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.4), rgba(171, 219, 247, 0.56));
+  background-color: rgba(157, 187, 199, 0.43);
+  /*background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.4), rgba(166, 185, 247, 0.56));*/
 }
 
 .dataBodyView {
@@ -178,7 +184,7 @@ section.resume-section .resume-item .resume-date {
 
 .foot{
   text-align: center!important;
-  background-color: #212529;
+  background-color: #383e44;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -226,25 +232,9 @@ section.resume-section .resume-item .resume-date {
 
 /*----------------------------------------------------------- COLOR --------------------------------------------------*/
 .yellow{color: #e0a800}
-.green{color: #44e07c}
+.green{color: #4dd18b}
 .blue{color: #5c69e0}
 .red{color: #e0522a}
-
-.bg-primary {
-  background-color: #518492 !important;
-}
-
-.text-primary {
-  color: #BD5D38 !important;
-}
-
-a {
-  color: #BD5D38;
-}
-
-a:hover, a:focus, a:active {
-  color: #824027;
-}
 
 /*---------------------------------------------------------- SOCIAL --------------------------------------------------*/
 
@@ -267,7 +257,7 @@ a:hover, a:focus, a:active {
 }
 
 .social-icons a:hover {
-  background-color: #718e92;
+  background-color: #73696A;
 }
 
 .dev-icons {
@@ -278,9 +268,7 @@ a:hover, a:focus, a:active {
   color: #BD5D38;
 }
 
-/*----------------------------------------------------------- IMAGE --------------------------------------------------*/
-
-
+/*----------------------------------------------------------- SKILL --------------------------------------------------*/
 .containerCodeImage {
   display: inline-grid;
   padding: .25rem;
@@ -289,18 +277,18 @@ a:hover, a:focus, a:active {
   border: 1px solid #dee2e6;
   border-radius: .25rem;
   position: relative;
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  width: 50%;
   cursor: default !important;
 }
 
-.imageCode {
+.codeImage {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.textCode {
+.codeText {
   position: absolute;
   bottom: 0;
   color: #212529;
@@ -308,12 +296,31 @@ a:hover, a:focus, a:active {
   height: 100%;
   transition: 0.7s ease;
   opacity:0;
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1.2em;
   padding-top: 35%;
   text-align: center;
 }
 
+.containerCodeImage:hover{
+  box-shadow:-1px 1px 3px 1px #212529;
+  background-color: #ecf2f7
+}
+
+.containerCodeImage:hover .codeImage {
+  opacity: 0.1;
+}
+
+.containerCodeImage:hover .codeText {
+  opacity: 1;
+}
+
+
+@media (max-width: 850px) {
+  .codeTitle {font-size: 12px !important;}
+  .codeText {font-size: 10px !important;}
+}
+
+/*
 .php{background-image: radial-gradient(#ffffff, rgba(156, 174, 255, 0.56), rgba(80, 80, 80, 0.67));}
 .python{background-image: radial-gradient(#ffffff, rgba(234, 194, 50, 0.34), rgba(73, 67, 224, 0.37));}
 .html{background-image: radial-gradient(#ffffff, rgba(224, 82, 42, 0.33), rgba(255, 110, 31, 0.33));}
@@ -322,25 +329,25 @@ a:hover, a:focus, a:active {
 .javascript{background-image: radial-gradient(#ffffff, rgba(255, 213, 52, 0.48), rgba(255, 191, 81, 0.53));}
 .mongodb{background-image: radial-gradient(#ffffff, rgba(88, 88, 88, 0.55), rgba(123, 214, 103, 0.56));}
 .mysql{background-image: radial-gradient(#ffffff, rgba(63, 142, 214, 0.47), rgba(255, 110, 31, 0.61));}
-.postgre{background-image: radial-gradient(#dee3e5, #a9c5d6, #e7f9ff);font-size: 1.1em;}
-
-.containerCodeImage:hover{
-  box-shadow:-1px 1px 3px 1px #212529;
-}
-
-.containerCodeImage:hover .imageCode {
-  opacity: 0.2;
-}
-
-.containerCodeImage:hover .textCode {
-  opacity: 1;
-}
+.postgre{background-image: radial-gradient(#dee3e5, #a9c5d6, #e7f9ff)}
+*/
 
 /* --------------------------------------------------------- EMAIL ---------------------------------------------------*/
 .labelEmail {
   color: #212529 !important;
   font-size: 1rem;
   font-weight: bold
+}
+
+.gif{width: auto}
+
+@media (max-width: 850px) {
+  @media (orientation: portrait) {
+    .gif{width: 100%}
+  }
+  @media (orientation: landscape) {
+    .gif{width: 50%}
+  }
 }
 
 /*--------------------------------------------------------- SOCIAL ---------------------------------------------------*/

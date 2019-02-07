@@ -38,20 +38,15 @@ app.controller("footerController", function ($scope) {
 });
 
 app.controller("aboutController", function ($scope) {
-    $scope.page = 'ABOUT';
 });
 
 app.controller("experienceController", function ($scope) {
-    $scope.page = 'EXPERIENCE';
 });
 
 app.controller("educationController", function ($scope) {
-    $scope.page = 'EDUCATION';
 });
 
 app.controller("skillsController", function ($scope) {
-
-    $scope.page = 'SKILLS';
 
     $scope.projects = [
                         {title: 'SVILUPPIALE', description: 'Random projects developed for test.', link: 'sviluppiAle'},
@@ -66,22 +61,27 @@ app.controller("skillsController", function ($scope) {
 
 
 app.controller("interestsController", function ($scope) {
-    $scope.page = 'INTERESTS';
 });
 
 app.controller("contactController",  ['$scope', '$http', function ($scope, $http) {
 
-    $scope.page = 'CONTACT';
+    $scope.sendingEmail = false;
 
     $scope.email = {email: '', subject: '', message: ''};
 
     $scope.sendEmail = function () {
+
+        $scope.sendingEmail = true;
+
         $http({
             method: 'POST',
-            url: 'http://alessandropericolo14.altervista.org/page/contact.php',
+            url: 'http://alessandropericolo14.altervista.org/src/contact.php',
             data: $scope.email,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function(data){
+
+            $scope.sendingEmail = false;
+
             if(data.statusText === "OK"){
                 Swal.fire({
                     title: 'Your email was sent successfully!',
@@ -110,3 +110,8 @@ app.controller("contactController",  ['$scope', '$http', function ($scope, $http
         });
     };
 }]);
+
+// Closes responsive menu when a scroll trigger link is clicked
+$('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+});
