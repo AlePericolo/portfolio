@@ -197,10 +197,17 @@ section.resume-section .resume-item .resume-date {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+    .customFooterWidth {max-width: 75% !important;}
+}
+@media (min-width: 1400px) {
+    .customFooterWidth {max-width: 93% !important;}
+}
+
 @media (min-width: 850px) {
   .foot{height: 5vh}
-  .footFont{font-size: 1rem;}
-  .footImage{max-width:5vh}
+  .footFont{font-size: 1rem; text-align: left}
+  .footImage{max-width:5vh; text-align: right}
 }
 
 @media (max-width: 850px) {

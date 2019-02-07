@@ -32,7 +32,7 @@ app.config(function($routeProvider) {
 
 app.controller("footerController", function ($scope) {
     $scope.playSound = function (s) {
-        var snd = new Audio('sound/' + s + ".wav");
+        var snd = new Audio('media/sound/' + s + ".wav");
         snd.play();
     }
 });
