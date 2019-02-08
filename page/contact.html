@@ -1,4 +1,7 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact" ng-controller="contactController">
+    <div class="overlay" ng-class="sendingEmail ? 'block':'none' " onclick="off()">
+        <div class="containerGif"> <img alt="sending.." src="media/img/plane.gif" class="gif"> </div>
+    </div>
     <div class="w-100">
         <h2 class="mb-5">Contact me</h2>
         <form name="emailForm" ng-submit="sendEmail()" ng-if="!sendingEmail">
@@ -23,12 +26,9 @@
                     <div ng-message-exp="['required', 'maxlength']"> Message field is required and must be less than 150 characters long. </div>
                 </div>
             </md-input-container>
-            <md-input-container class="w-100 text-center mb-0">
+            <md-input-container class="w-100 text-center mt-5 mb-0">
                 <md-button type="submit" class="md-raised md-cornered" ng-disabled="emailForm.$invalid">&nbsp;Send <i class="far fa-envelope"></i> &nbsp;</md-button>
             </md-input-container>
         </form>
-        <div class="col-12 text-center" ng-if="sendingEmail">
-            <img alt="sending.." src="media/img/plane.gif" class="gif">
-        </div>
     </div>
 </section>

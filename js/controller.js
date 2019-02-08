@@ -9,10 +9,6 @@ app.config(function($routeProvider) {
             templateUrl : "page/experience.html",
             controller : "experienceController"
         })
-        .when("/education", {
-            templateUrl : "page/education.html",
-            controller : "educationController"
-        })
         .when("/skills", {
             templateUrl : "page/skills.html",
             controller : "skillsController"
@@ -41,9 +37,6 @@ app.controller("aboutController", function ($scope) {
 });
 
 app.controller("experienceController", function ($scope) {
-});
-
-app.controller("educationController", function ($scope) {
 });
 
 app.controller("skillsController", function ($scope) {

@@ -76,6 +76,7 @@ p.lead {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    /*margin: 80% auto 0;*/
     margin: auto auto 0;
     padding: 0.5rem;
   }
@@ -96,6 +97,7 @@ p.lead {
     flex-grow: 0;
     width: 100%;
     margin-bottom: auto;
+    padding-bottom: 4vh;
   }
   #sideNav .navbar-collapse .navbar-nav {
     -webkit-box-orient: vertical;
@@ -157,7 +159,10 @@ p.lead {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 90rem;
+  /*max-width: 90rem;*/
+  max-width: 100rem;
+  padding-left: 5rem !important;
+  padding-right: 10rem !important;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -166,7 +171,7 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 95vh;
   }
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
@@ -338,15 +343,40 @@ section.resume-section .resume-item .resume-date {
   font-size: 1rem;
   font-weight: bold
 }
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+@media (min-width: 850px) {
+  .overlay { padding-left: 20rem; }
+}
 
-.gif{width: auto}
+.containerGif{
+  text-align: center;
+  margin-top: 10% !important;
+}
+
+.block{display: block}
+.none{display: none}
+
+.gif{width: auto;}
 
 @media (max-width: 850px) {
   @media (orientation: portrait) {
-    .gif{width: 100%}
+    .gif{width: 85%}
+    .containerGif{margin-top: 40% !important;}
   }
   @media (orientation: landscape) {
-    .gif{width: 50%}
+    .gif{width: 25%; margin-top: 2% !important;}
   }
 }
 
