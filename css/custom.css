@@ -11,7 +11,7 @@ body {
   }
 }
 
-.bg-primary {background-color: #2b4850 !important;}
+.bg-primary {background-color: #2b4850 !important}
 
 /*-------------------------------------------------- TYPOGRAPHY ------------------------------------------------------*/
 
@@ -42,6 +42,10 @@ p.lead {
   font-weight: 500;
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.5rem;
+}
+
+.italic{
+  font-style: italic
 }
 
 /*--------------------------------------------------- SIDERBAR -------------------------------------------------------*/
@@ -239,6 +243,14 @@ section.resume-section .resume-item .resume-date {
 
 /*---------------------------------------------------------- SOCIAL --------------------------------------------------*/
 
+.cvIcon{
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cvIcon:hover{
+  color: #e0522a
+}
 
 .social-icons a {
   display: inline-block;
@@ -394,16 +406,16 @@ section.resume-section .resume-item .resume-date {
 }
 
 /*--------------------------------------------------------- OVERWRITE ------------------------------------------------*/
-.list-group-item {
-  background-color: transparent;
-}
-
 .md-input:focus {
   border-color: #212529 !important;
-  border-width: 0 0 0.2px;
+  border-width: 0 0 0.2px
+}
+
+a{
+  color: inherit
 }
 
 a:hover {
-  color: transparent;
+  color: inherit;
   text-decoration: none
 }
