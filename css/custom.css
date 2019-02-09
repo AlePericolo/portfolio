@@ -76,7 +76,6 @@ p.lead {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    /*margin: 80% auto 0;*/
     margin: auto auto 0;
     padding: 0.5rem;
   }
@@ -160,9 +159,6 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   /*max-width: 90rem;*/
-  max-width: 100rem;
-  padding-left: 5rem !important;
-  padding-right: 10rem !important;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -209,10 +205,10 @@ section.resume-section .resume-item .resume-date {
 }
 
 @media (min-width: 1024px) {
-    .customFooterWidth {max-width: 75% !important;}
+    .customFooterWidth {max-width: 75% !important; padding: 0px;}
 }
 @media (min-width: 1400px) {
-    .customFooterWidth {max-width: 93% !important;}
+    .customFooterWidth {max-width: 93% !important; padding: 0px;}
 }
 
 @media (min-width: 850px) {
@@ -301,7 +297,7 @@ section.resume-section .resume-item .resume-date {
   height: 100%;
   transition: 0.7s ease;
   opacity:0;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-top: 35%;
   text-align: center;
 }
