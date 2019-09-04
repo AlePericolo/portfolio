@@ -22,9 +22,18 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Alessandro Pericolo</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="media/img/profile.png" alt="">
-      </span>
+      <div class="d-none d-lg-block">
+        <div class="carousel slide carousel-fade img-profile rounded-circle" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="media/img/profile/profile_1.png" class="img-fluid rounded-circle mx-auto" alt="...">
+            </div>
+            <div class="carousel-item" ng-repeat="k in [2,3,4,5,6,7,8,9,10]">
+              <img src="media/img/profile/profile_{{k}}.png" class="img-fluid rounded-circle mx-auto" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
