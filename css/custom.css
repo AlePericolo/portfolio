@@ -406,6 +406,10 @@ section.resume-section .resume-item .resume-date {
 }
 
 /*--------------------------------------------------------- OVERWRITE ------------------------------------------------*/
+.list-group-item {
+  background-color: transparent;
+}
+
 .md-input:focus {
   border-color: #212529 !important;
   border-width: 0 0 0.2px
