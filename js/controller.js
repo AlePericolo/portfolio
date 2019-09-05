@@ -54,6 +54,10 @@ app.controller("skillsController", function ($scope) {
 
 
 app.controller("aboutController", function ($scope) {
+    $('#profilePicCarousel').carousel({
+        interval: 4000,
+        cycle: true
+    });
 });
 
 app.controller("contactController",  ['$scope', '$http', function ($scope, $http) {
