@@ -73,6 +73,7 @@ app.controller("contactController",  ['$scope', '$http', function ($scope, $http
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function(data){
 
+            console.log(data);
             $scope.sendingEmail = false;
 
             if(data.statusText === "OK"){

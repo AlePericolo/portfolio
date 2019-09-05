@@ -8,14 +8,14 @@
 
 $data = json_decode(file_get_contents("php://input"));
 
-if (json_last_error() == JSON_ERROR_NONE){
+if(filter_var($data->email, FILTER_VALIDATE_EMAIL) && strlen($data->subject) > 0 && strlen($data->message)){
 
     $to = "ale.pericolo@gmail.com";
 
     $subject = $data->subject;
 
     $message = $data->message.'<br><br>';
-    $message .= "From: ".$data->email .'<br>';
+    $message .= "From: ". $data->email .'<br>';
     $message .= "Send by: alessandropericolo14.altervista.org".'<br><br><br>';
 
     $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -27,5 +27,8 @@ if (json_last_error() == JSON_ERROR_NONE){
     return mail($to, $subject, $message, $headers);
 
 }else{
-    echo 'error';
+
+    echo 'Error';
+    return json_encode(array("statusText"=>"KO", "message"=>"Parametri non validi"));
+
 }
