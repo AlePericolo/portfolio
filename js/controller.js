@@ -3,7 +3,7 @@ var app = angular.module("dangerApp", ["ngRoute", "ngAnimate", "ngMaterial", "ng
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "page/about.html"
+            templateUrl : "page/home.html"
         })
         .when("/experience", {
             templateUrl : "page/experience.html",
@@ -13,9 +13,9 @@ app.config(function($routeProvider) {
             templateUrl : "page/skills.html",
             controller : "skillsController"
         })
-        .when("/interests", {
-            templateUrl : "page/interests.html",
-            controller : "interestsController"
+        .when("/about", {
+            templateUrl : "page/about.html",
+            controller : "aboutController"
         })
         .when("/contact", {
             templateUrl : "page/contact.html",
@@ -33,7 +33,7 @@ app.controller("footerController", function ($scope) {
     }
 });
 
-app.controller("aboutController", function ($scope) {
+app.controller("homeController", function ($scope) {
 });
 
 app.controller("experienceController", function ($scope) {
@@ -53,7 +53,7 @@ app.controller("skillsController", function ($scope) {
 });
 
 
-app.controller("interestsController", function ($scope) {
+app.controller("aboutController", function ($scope) {
 });
 
 app.controller("contactController",  ['$scope', '$http', function ($scope, $http) {
