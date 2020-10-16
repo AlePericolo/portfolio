@@ -356,6 +356,11 @@ section.resume-section .resume-item .resume-date {
 .mongodb{background-image: radial-gradient(#ffffff, rgba(88, 88, 88, 0.55), rgba(123, 214, 103, 0.56));}
 .mysql{background-image: radial-gradient(#ffffff, rgba(63, 142, 214, 0.47), rgba(255, 110, 31, 0.61));}
 .postgre{background-image: radial-gradient(#dee3e5, #a9c5d6, #e7f9ff)}
+
+.node{}
+.sass{}
+.react{}
+.docker{}
 */
 
 /* --------------------------------------------------------- EMAIL ---------------------------------------------------*/
