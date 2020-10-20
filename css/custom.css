@@ -308,10 +308,12 @@ section.resume-section .resume-item .resume-date {
   border: 1px solid #dee2e6;
   border-radius: .25rem;
   position: relative;
-  height: 50%;
-  width: 50%;
+  width: 60%;
   cursor: default !important;
+  margin-bottom: 1rem!important;
 }
+
+.containerCodeImageSmall {width: 80%;}
 
 .codeImage {
   display: block;
@@ -332,31 +334,33 @@ section.resume-section .resume-item .resume-date {
   font-size: 1vw;
 }
 
-.codeTextSmall {font-size: 0.7vw;}
-
 .containerCodeImage:hover{
   box-shadow:-1px 1px 3px 1px #212529;
   background-color: #ecf2f7
 }
 
-.containerCodeImage:hover .codeImage {
-  opacity: 0.1;
-}
+.containerCodeImage:hover .codeImage {opacity: 0.1;}
 
-.containerCodeImage:hover .codeText {
-  opacity: 1;
-}
+.containerCodeImage:hover .codeText { opacity: 1;}
 
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .codeText {font-size: 0.7vw !important;}
+}
 @media (min-width: 768px) and (max-width: 992px) {
-  .codeText {font-size: 1.5vw !important;}
-  .codeTextSmall {font-size: 1vw !important;}
+  .codeText {font-size: 1vw !important;}
 }
 
 @media (max-width: 768px){
   .codeText {font-size: 2.5vw !important;}
-  .codeTextSmall {font-size: 2vw !important;}
 }
 
+@media (min-width: 435px) and (max-width: 576px){
+  .codeText {font-size: 2.2vw !important;}
+}
+@media (max-width: 435px){
+  .codeText {font-size: 1.5vw !important;}
+}
 /*
 .php{background-image: radial-gradient(#ffffff, rgba(156, 174, 255, 0.56), rgba(80, 80, 80, 0.67));}
 .python{background-image: radial-gradient(#ffffff, rgba(234, 194, 50, 0.34), rgba(73, 67, 224, 0.37));}
