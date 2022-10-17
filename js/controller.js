@@ -49,7 +49,7 @@ app.controller("skillsController", function ($scope) {
                         {title: 'SNAKE', description: 'The classic snake game.', link: 'snake'},
                         {title: 'PERILNETWORK', description: 'Mini social network.', link: 'perilNetwork'},
                         {title: 'CRYPTO', description: 'Crypt data with openssl keys.', link: 'crypto'}
-                      ];
+                    ];
 });
 
 
@@ -77,7 +77,7 @@ app.controller("contactController",  ['$scope', '$http', function ($scope, $http
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function(data){
 
-            console.log(data);
+            //console.log(data);
             $scope.sendingEmail = false;
 
             if(data.statusText === "OK"){
